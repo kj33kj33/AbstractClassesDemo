@@ -10,10 +10,6 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            /*
-             * Todo follow all comments!! 
-             */
-
             #region Vehicles
 
             /*
@@ -32,6 +28,45 @@ namespace ConsoleUI
             */
 
             // Create a list of Vehicle called vehicles
+
+            List<Vehicle> vehicleList = new List<Vehicle>();
+
+            Car fJ = new Car()
+            {
+                Make = "Toyota",
+                Model = "FJ Cruiser",
+                Year = 2005,
+                HasTrunk = true
+            };
+
+            Motorcycle harley = new Motorcycle()
+            {
+                Make = "Harley Davidson",
+                Model = "Fat Boy",
+                Year = 1998,
+                HasSideCar = false
+            };
+
+            Vehicle hummer = new Car()
+            {
+                Make = "Hummer",
+                Model = "H2",
+                Year = 2005,
+                HasTrunk = true
+            };
+
+            Vehicle ninja = new Motorcycle()
+            {
+                Make = "Kawasaki",
+                Model = "Ninja",
+                Year = 2010,
+                HasSideCar = false
+            };
+
+            hummer.DriveAbstract(hummer);
+            fJ.DriveVirtual(fJ);
+            ninja.DriveAbstract(ninja);
+            harley.DriveVirtual(harley);
 
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
